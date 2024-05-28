@@ -1,0 +1,49 @@
+<div class="card mb-3 mx-auto mt-5" style="max-width: 80%;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="../../assets/images/business-people_23-2148484149.avif" class="img-fluid rounded-start " style="height: 100%;" alt="...">
+      </div>
+      <div class="col-md-8">
+        
+        
+        <div class="card-body">
+            <h2 class="fw-bolder">ADD EMPLOYEE</h2>
+
+          <form action="" [formGroup]="employeeForm" (ngSubmit)="handleSubmit()">
+            <div class="mb-3">
+                <label for="">Name</label>
+                <input type="text" class="form-control" formControlName="name">
+            </div>
+            <div class="mb-3">
+                <label for="">Department</label>
+                <input type="text" class="form-control" formControlName="dept">
+
+            </div>
+            <div class="mb-3">
+                <label for="">Phone Number</label>
+                <input type="text" class="form-control" formControlName="phone">
+
+            </div>
+            <div class="mb-3">
+                <label for="">Email</label>
+                <input type="email" class="form-control" formControlName="email">
+
+            </div>
+            <div class="mb-3">
+                <label for="">Salary</label>
+                <input type="text" class="form-control" formControlName="salary">
+
+            </div>
+
+            
+            <div class="mb-3">
+                <button class="bg-emerald-900 btn btn-lg text-white" type="submit">Add</button>
+            </div>
+            
+          </form>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
