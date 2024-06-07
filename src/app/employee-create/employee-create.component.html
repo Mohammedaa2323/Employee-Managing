@@ -1,21 +1,26 @@
-<div class="card mb-3 mx-auto mt-5" style="max-width: 80%;">
+<button routerLink="" class="btn btn-outline-primary mt-3">Home</button>
+<div class="card mb-3 mx-auto mt-5" style="max-width: 90%;">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="../../assets/images/business-people_23-2148484149.avif" class="img-fluid rounded-start " style="height: 100%;" alt="...">
+        <img src="../../assets/images/Download group of people of different professions for free (1).jpeg" class="img-fluid rounded-start h-100" alt="...">
       </div>
       <div class="col-md-8">
         
         
-        <div class="card-body">
-            <h2 class="fw-bolder">ADD EMPLOYEE</h2>
+        <div class="card-body ">
+            <h1 class="fw-bolder" *ngIf="isEdit;else addEmp">EDIT EMPLOYEE</h1>
+
+            <ng-template #addEmp>
+              <h2 class="fw-bolder">ADD EMPLOYEE</h2>
+            </ng-template>
 
           <form action="" [formGroup]="employeeForm" (ngSubmit)="handleSubmit()">
             <div class="mb-3">
-                <label for="">Name</label>
+                <label for="">Name :</label>
                 <input type="text" class="form-control" formControlName="name">
             </div>
             <div class="mb-3">
-                <label for="">Department</label>
+                <label for="">Department :</label>
                 <input type="text" class="form-control" formControlName="dept">
 
             </div>
@@ -25,19 +30,19 @@
 
             </div>
             <div class="mb-3">
-                <label for="">Email</label>
+                <label for="">Email :</label>
                 <input type="email" class="form-control" formControlName="email">
 
             </div>
             <div class="mb-3">
-                <label for="">Salary</label>
+                <label for="">Salary :</label>
                 <input type="text" class="form-control" formControlName="salary">
 
             </div>
 
             
             <div class="mb-3">
-                <button class="bg-emerald-900 btn btn-lg text-white" type="submit">Add</button>
+                <button class="bg-info btn btn-lg text-white" type="submit">{{isEdit?"Change":"Add"}}</button>
             </div>
             
           </form>

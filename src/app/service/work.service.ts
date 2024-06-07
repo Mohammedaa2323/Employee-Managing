@@ -15,7 +15,7 @@ export class WorkService {
   }
 
   retrieveEmployee(id:any){
-    return this.http.get(`http://127.0.0.1:8000/api/employee/${id}`)
+    return this.http.get(`http://127.0.0.1:8000/api/employee/${id}/`)
   }
 
   createEmployee(data:any){
@@ -23,11 +23,11 @@ export class WorkService {
   }
 
   updateEmployee(id:any,data:any){
-    return this.http.put(`http://127.0.0.1:8000/api/employee/${id}`,data)
+    return this.http.put(`http://127.0.0.1:8000/api/employee/${id}/`,data)
   }
 
   deleteEmployee(id:any){
-    return this.http.delete(`http://127.0.0.1:8000/api/employee/${id}`)
+    return this.http.delete(`http://127.0.0.1:8000/api/employee/${id}/`)
   }
 
 }

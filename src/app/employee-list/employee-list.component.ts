@@ -10,8 +10,18 @@ export class EmployeeListComponent {
   employee:any
 
   constructor(private service:WorkService){
-    this.service.getEmployee().subscribe(data=>this.employee=data)
+
+    this.ngOnInit()
   }
 
+  ngOnInit(){
+    this.service.getEmployee().subscribe(data=>this.employee=data)
+
+  }
+
+  handleDelete(id:any){
+
+    this.service.deleteEmployee(id).subscribe(data=>this.ngOnInit())
+  }
 
 }
